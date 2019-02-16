@@ -1,0 +1,24 @@
+
+CartList    - Key of gro selected product
+Token - for token
+userID - Key for userID 
+userProfileData - Key for user profile data
+
+
+
+
+data Formet Send To prepare cart.
+
+             Object {
+[23:25:45]       "info": null,
+[23:25:45]       "map": 1376,
+[23:25:45]       "mapcid": 10,
+[23:25:45]       "offer": 0,
+[23:25:45]       "pic": "all_product_pics/vegetables/green-brinjal.jpg",
+[23:25:45]       "pid": 1331,
+[23:25:45]       "price": 30,
+[23:25:45]       "size": 1,
+[23:25:45]       "stock": 1,
+[23:25:45]       "title": "Long Brinjal Green",
+[23:25:45]       "unit": "Kg",
+[23:25:45]     },
