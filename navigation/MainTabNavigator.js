@@ -76,12 +76,12 @@ const AppDrawerNavigator = createDrawerNavigator({
 	// 		drawerIcon: ({ tintColor }) => (<Icon name="home-outline" size={24} style={{ color: tintColor }} />),
 	// 	}
   // },
-  Services:{
-		screen:ServiceNavigation,
-		navigationOptions: {
-			drawerIcon: ({ tintColor }) => (<Icon name="phone-call" size={24} style={{ color: tintColor }} />),
-		}
-  },
+//   Services:{
+// 		screen:ServiceNavigation,
+// 		navigationOptions: {
+// 			drawerIcon: ({ tintColor }) => (<Icon name="phone-call" size={24} style={{ color: tintColor }} />),
+// 		}
+//   },
   OfferZone:{
 		screen:OfferNavigation,
 		navigationOptions: {
@@ -94,12 +94,12 @@ const AppDrawerNavigator = createDrawerNavigator({
 			drawerIcon: ({ tintColor }) => (<Icon name="shopping-bag" size={24} style={{ color: tintColor }} />),
 		}
   },
-  MyRewards:{
-		screen: RewardNavigation,
-		navigationOptions: {
-			drawerIcon: ({ tintColor }) => (<Icon name="gift" size={24} style={{ color: tintColor }} />),
-		}
-  },
+//   MyRewards:{
+// 		screen: RewardNavigation,
+// 		navigationOptions: {
+// 			drawerIcon: ({ tintColor }) => (<Icon name="gift" size={24} style={{ color: tintColor }} />),
+// 		}
+//   },
   MyCart:{
 		screen:CartNavigation,
 		navigationOptions: {

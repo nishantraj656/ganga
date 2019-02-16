@@ -268,15 +268,15 @@ _addItem =(id)=>{
       return(
         <Container>
           <Content>
-            <Card style={{height:100,width:500}} transparent >
+            {/* <Card style={{height:100,width:500}} transparent >
               <FlatList
                 data={this.state.data}
-               
+                keyExtractor={(item)=>{item.index+''}}
                
                 renderItem={this._renderItem}
                 horizontal
               />
-            </Card>
+            </Card> */}
             <Card style={{height:150}}>
               
                 <DeckSwiperAdvancedExample/>
@@ -291,6 +291,7 @@ _addItem =(id)=>{
                   <FlatList
                   data={this.state.DataRecent}
                   renderItem={this._renderRecent}
+                  keyExtractor={(item)=>{item.psid+''}}
                   horizontal
                   />
               </Card>
@@ -298,11 +299,11 @@ _addItem =(id)=>{
             }
 
 
-            <Button bordered dark onPress={()=>{
+            {/* <Button bordered dark onPress={()=>{
               this.props.navigation.navigate('Gorcery');
             }}>
               <Text> Go to Profile screen</Text>
-            </Button>
+            </Button> */}
           </Content>
         </Container>
       );
