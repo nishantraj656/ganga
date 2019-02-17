@@ -1,31 +1,29 @@
 import React from 'react';
-
 import {
-            ActivityIndicator,
-            AsyncStorage,
-            Button,
-            StatusBar,
-            StyleSheet,
-            TouchableOpacity,
-            Image,
-            View,
-            Text,
-            FlatList,
-            ScrollView,
-            Modal,
-            TouchableHighlight,
-            Alert,
-            Picker,
-            NetInfo,
-            ToastAndroid
-        } from 'react-native';
-
+        ActivityIndicator,
+        AsyncStorage,
+        Button,
+        StatusBar,
+        StyleSheet,
+        TouchableOpacity,
+        Image,
+        View,
+        Text,
+        FlatList,
+        ScrollView,
+        Modal,
+        TouchableHighlight,
+        Alert,
+        Picker,
+        NetInfo,
+        ToastAndroid,
+        ActionSheet
+    } from 'react-native';
 
 import Global from  '../../constants/Global';
 import {CartPrepare} from '../../constants/OrderListPrepare';
 import { SearchBar } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
 
 
 export default class MostBuying extends React.Component
