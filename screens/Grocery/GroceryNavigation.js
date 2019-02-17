@@ -48,11 +48,12 @@ import {createDrawerNavigator,DrawerItems,createAppContainer, SafeAreaView,creat
 import ShopDetail from './shopDetails';
 import ShopsProductsList from './ShopProductList';
 import ShopProductDetails from './ShopProductDetails';
+import MostBuying from './MostBuying';
 
 const StackNav =  createStackNavigator(
     {
       category: {
-        screen: Category,
+        screen: MostBuying,
         navigationOptions: ({ navigation }) => ({
           headerTitle: HeaderTitle,
           headerStyle: {
@@ -61,25 +62,36 @@ const StackNav =  createStackNavigator(
           headerLeft: <MenuButton obj={navigation}  />,
           headerRight: <CartButton obj={navigation} value="10"  />,
         }),
-      },
-      ItemDetails:{
-          screen: Details,
-          navigationOptions: ({ navigation }) => ({
-            headerTitle:"Item Details",
-           headerStyle: {
-             backgroundColor: '#2874f0'
-           },
-         }),
-      },
-      itemList:{
-          screen:ItemList,
-          navigationOptions: ({ navigation }) => ({
-            headerTitle:"Item Details",
-           headerStyle: {
-             backgroundColor: '#2874f0'
-           },
-         }),
-      }
+        },
+      // category: {
+      //   screen: Category,
+      //   navigationOptions: ({ navigation }) => ({
+      //     headerTitle: HeaderTitle,
+      //     headerStyle: {
+      //       backgroundColor: '#2874f0'
+      //     },
+      //     headerLeft: <MenuButton obj={navigation}  />,
+      //     headerRight: <CartButton obj={navigation} value="10"  />,
+      //   }),
+      // },
+      // ItemDetails:{
+      //     screen: Details,
+      //     navigationOptions: ({ navigation }) => ({
+      //       headerTitle:"Item Details",
+      //      headerStyle: {
+      //        backgroundColor: '#2874f0'
+      //      },
+      //    }),
+      // },
+      // itemList:{
+      //     screen:ItemList,
+      //     navigationOptions: ({ navigation }) => ({
+      //       headerTitle:"Item Details",
+      //      headerStyle: {
+      //        backgroundColor: '#2874f0'
+      //      },
+      //    }),
+      // }
     },
     {
       
@@ -100,17 +112,17 @@ class ShoppingScreen1 extends React.Component {
 
 const ShoppingScreen =  createStackNavigator(
   {
-    ShopList: {
-      screen: ShoppingPage,
-      navigationOptions: ({ navigation }) => ({
-        headerTitle: "Shop List",
-        headerStyle: {
-          backgroundColor: '#2874f0'
-        },
-        headerLeft: <MenuButton obj={navigation}  />,
-        headerRight: <CartButton obj={navigation} value="10"  />,
-      }),
-    },
+    // ShopList: {
+    //   screen: ShoppingPage,
+    //   navigationOptions: ({ navigation }) => ({
+    //     headerTitle: "Shop List",
+    //     headerStyle: {
+    //       backgroundColor: '#2874f0'
+    //     },
+    //     headerLeft: <MenuButton obj={navigation}  />,
+    //     headerRight: <CartButton obj={navigation} value="10"  />,
+    //   }),
+    // },
     CategoryList:{
         screen: ShopCategory,
         navigationOptions: ({ navigation }) => ({
@@ -120,15 +132,15 @@ const ShoppingScreen =  createStackNavigator(
          },
        }),
     },
-    ShopDetail:{
-        screen:ShopDetail,
-        navigationOptions: ({ navigation }) => ({
-          headerTitle:"Details",
-         headerStyle: {
-           backgroundColor: '#2874f0'
-         },
-       }),
-    },
+    // ShopDetail:{
+    //     screen:ShopDetail,
+    //     navigationOptions: ({ navigation }) => ({
+    //       headerTitle:"Details",
+    //      headerStyle: {
+    //        backgroundColor: '#2874f0'
+    //      },
+    //    }),
+    // },
     ShopsProductsList:{
       screen: ShopsProductsList,
       navigationOptions: ({ navigation }) => ({

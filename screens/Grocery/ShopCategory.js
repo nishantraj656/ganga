@@ -26,11 +26,11 @@ export default class Category extends Component {
     fatchCategory =async ()=> {
         
         this.setState({renderCoponentFlag:false});
-        let value = await AsyncStorage.getItem('ShopID');
-        if(value ==null){
-            alert('Shop not selected.');
-            return; 
-        }
+        // let value = await AsyncStorage.getItem('ShopID');
+        // if(value ==null){
+        //     alert('Shop not selected.');
+        //     return; 
+        // }
         var connectionInfoLocal = '';
         NetInfo.getConnectionInfo().then((connectionInfo) => {
         console.log('Initial, type: ' + connectionInfo.type + ', effectiveType: ' + connectionInfo.effectiveType);
@@ -44,6 +44,7 @@ export default class Category extends Component {
             50,
             );        
         }else{
+            this.setState({renderCoponentFlag:false});
             console.log("yes internet ");
             fetch(Global.API_URL+'Grocery/Shop/category', {
                 method: 'POST',
@@ -52,7 +53,7 @@ export default class Category extends Component {
                     'Content-Type': 'application/json',
                 },
                 body:JSON.stringify({
-                    Shopid:value
+                    Shopid:5
                 })
             }).then((response) => response.json())
             .then((responseJson) => {
@@ -109,7 +110,8 @@ export default class Category extends Component {
                             ckeyT = data.gro_cat_id;
                         }
                     }
-                    this.setState({CategoryData:list});
+                    this.setState({CategoryData:list,
+                        renderCoponentFlag:true});
                 }
                 }).catch((error) => {
                     console.log("on error featching:"+error);
@@ -117,7 +119,6 @@ export default class Category extends Component {
         }
         });
         console.log(connectionInfoLocal);  
-        this.setState({renderCoponentFlag:true});
     }
 
     componentDidMount() {

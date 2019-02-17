@@ -56,9 +56,9 @@ export default class ShopsProductsList extends React.Component
     }
 
     fetech = async() =>{
-        let value = await AsyncStorage.getItem('ShopID')
+        //let value = await AsyncStorage.getItem('ShopID')
         let id = this.state.sid;
-        if(value ==null && id == null){
+        if(id == null){
             return; 
         }
 
@@ -85,12 +85,12 @@ export default class ShopsProductsList extends React.Component
                         'Content-Type': 'application/json',
                     },
                     body:JSON.stringify({
-                        Shopid:value,
+                        Shopid:5,
                         id:id
                     })
                     }).then((response) => response.json())
                         .then((responseJson) => {  
-                        //console.log("Shop List Load ......",responseJson);
+                        console.log("Shop List Load ......",responseJson);
                         if(Object.keys(responseJson.data).length > 0) {
                             this.setState({
                                 data:responseJson.data,
